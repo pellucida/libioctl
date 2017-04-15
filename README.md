@@ -16,19 +16,20 @@ The default interface (eth0) and returned hardware
 address (BA:DB:AD:C0:FF:EE) that have been compiled in can also be altered at
 run time using environment variables REDACT_HWADDR, REDACT_INTERFACE
 
-If using LD_PRELOAD is undesirable patchelf 
-(https://nixos.org/patchelf.html)
+If using LD_PRELOAD is undesirable
+[patchelf](https://nixos.org/patchelf.html)
 to insert this shared library into the DT_NEEDED part of the ELF header of your
 executable (or another shared object)
 
-eg 
+eg
+
+Assume myprog is in *$INSTDIR*/bin and libioctl.so.1 is in *$INSTDIR*/lib64
 ````
-# Assume myprog is in $INSTDIR/bin and libioctl.so.1 is in $INSTDIR/lib64
+# Note: `${ORIGIN}` is a literal interpreted by the run time loader *not* an environment variable
 patchelf --add-needed '${ORIGIN}/../lib64/libioctl.so.0' myprog
 ````
 ### LICENSE
-[Creative Commons CC0]
-(http://creativecommons.org/publicdomain/zero/1.0/legalcode)
+[Creative Commons CC0](http://creativecommons.org/publicdomain/zero/1.0/legalcode)
 
 ### AUTHOR
 [James Sainsbury](mailto:toves@sdf.lonestar.org)
