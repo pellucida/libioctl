@@ -17,7 +17,7 @@ address (BA:DB:AD:C0:FF:EE) that have been compiled in can also be altered at
 run time using environment variables REDACT_HWADDR, REDACT_INTERFACE
 
 If using LD_PRELOAD is undesirable patchelf 
-[https://nixos.org/patchelf.html] (https://nixos.org/patchelf.html)
+(https://nixos.org/patchelf.html)
 to insert this shared library into the DT_NEEDED part of the ELF header of your
 executable (or another shared object)
 
@@ -28,7 +28,6 @@ patchelf --add-needed '${ORIGIN}/../lib64/libioctl.so.0' myprog
 ````
 ### LICENSE
 Creative Commons CC0
-[http://creativecommons.org/publicdomain/zero/1.0/legalcode]
 (http://creativecommons.org/publicdomain/zero/1.0/legalcode)
 
 ### AUTHOR
