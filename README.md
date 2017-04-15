@@ -25,7 +25,8 @@ eg
 
 Assume myprog is in *$INSTDIR*/bin and libioctl.so.1 is in *$INSTDIR*/lib64
 ````
-# Note: `${ORIGIN}` is a literal interpreted by the run time loader *not* an environment variable
+# Note: '${ORIGIN}' is a literal interpreted by the run time loader *not* an environment variable
+
 patchelf --add-needed '${ORIGIN}/../lib64/libioctl.so.0' myprog
 ````
 ### LICENSE
