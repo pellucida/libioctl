@@ -1,4 +1,4 @@
-# libioctl
+## libioctl
 
 ### Intercept a Linux ioctl system call and edit its returned values.
 
@@ -31,4 +31,4 @@ Creative Commons CC0
 (http://creativecommons.org/publicdomain/zero/1.0/legalcode)
 
 ### AUTHOR
-[mailto:toves@sdf.lonestar.org](James Sainsbury)
+(James Sainsbury)[mailto:toves@sdf.lonestar.org]
