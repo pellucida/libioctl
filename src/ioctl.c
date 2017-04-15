@@ -20,7 +20,7 @@ static void	__attribute__((constructor)) hook_ioctl() {
 	real_ioctl	= dlsym (RTLD_NEXT, "ioctl");	
 }
 
-extern	void	__attribute((visibility("hidden")))
+extern	void	__attribute__((visibility("hidden")))
 	redact_ioctl_call (int fd, unsigned long int request, ...);
 
 int ioctl (int fd, unsigned long int request, ...) { 
