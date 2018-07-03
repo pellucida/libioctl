@@ -16,10 +16,10 @@ The default interface (eth0) and returned hardware
 address (BA:DB:AD:C0:FF:EE) that have been compiled in can also be altered at
 run time using environment variables REDACT_HWADDR, REDACT_INTERFACE
 
-If using LD_PRELOAD is undesirable
+If using LD_PRELOAD is undesirable then using
 [patchelf](https://nixos.org/patchelf.html)
 to insert this shared library into the DT_NEEDED part of the ELF header of your
-executable (or another shared object)
+executable (or another shared object) is another option.
 
 eg
 
